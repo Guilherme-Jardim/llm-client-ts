@@ -5,6 +5,7 @@ export interface Recorded {
   method?: string;
   url?: string;
   headers: IncomingMessage['headers'];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   body: any;
 }
 

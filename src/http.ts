@@ -167,7 +167,7 @@ export class HttpProvider implements LlmProvider {
       usage?: { prompt_tokens?: number; completion_tokens?: number };
     };
     try {
-      data = await res.json();
+      data = (await res.json()) as typeof data;
     } catch (error) {
       throw new LlmError('Resposta do servidor não é JSON válido', { cause: error });
     }
