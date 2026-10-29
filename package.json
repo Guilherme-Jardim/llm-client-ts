@@ -1,0 +1,51 @@
+{
+  "name": "llm-client-ts",
+  "version": "0.1.0",
+  "description": "Cliente de LLM em TypeScript agnóstico de provedor: tool calling, saída estruturada com Zod, streaming, retry e orçamento.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Guilherme Jardim",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "exemplos": "tsx exemplos/basico.ts"
+  },
+  "keywords": [
+    "llm",
+    "typescript",
+    "nodejs",
+    "tool-calling",
+    "zod"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.6",
+    "eslint": "^10.13.0",
+    "tsup": "^9.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.1",
+    "vitest": "^5.0.5"
+  },
+  "dependencies": {
+    "zod": "^4.6.7"
+  }
+}
